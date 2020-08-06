@@ -1,0 +1,64 @@
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+@mixin button {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px $mainColorY;
+
+    &:hover{
+        cursor: pointer;
+        transition: all 0.4s;
+        color: $mainColorW;
+        background: $mainColorY;
+    }
+}
+
+#quote{
+    margin-top: 20px;
+    padding-top: 30px;
+    background-color: $secondColorG;
+    text-align: center;
+    .quote_day{
+        position: relative;
+        .quote_tittle{
+            width: fit-content;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+
+            h3{
+                margin: auto;
+                width: fit-content;
+                padding: 20px;
+                @include text(0,2,0);
+
+                label{
+                    border-bottom: solid 2px $mainColorY;
+                }
+            }
+        }
+
+        i{
+            position: absolute;
+            top: 10px;
+            left: 48%;
+            @include text(0,0,3);
+            color: $mainColorW;
+        }
+
+        .quote_text{
+            margin-top: 20px;
+            h6{
+                margin-top: 20px;
+            }
+        }
+    }
+}

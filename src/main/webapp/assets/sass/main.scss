@@ -7,6 +7,7 @@
 $mainColorB: #2B2B2B;
 $mainColorY: #F7B02F;
 $mainColorW: #ffffff;
+$secondColorG:#EAEAEA;
 
 //fonts Size
 @mixin text($value1,$value2,$value3) {
@@ -36,3 +37,4 @@ $mainColorW: #ffffff;
 // imports
 @import "components/header";
 @import "components/about";
+@import "components/quote";

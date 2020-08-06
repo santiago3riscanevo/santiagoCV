@@ -142,3 +142,45 @@
   border-radius: 15px;
   box-shadow: -8px 8px 10px gray;
 }
+
+#quote {
+  margin-top: 20px;
+  padding-top: 30px;
+  background-color: #EAEAEA;
+  text-align: center;
+}
+#quote .quote_day {
+  position: relative;
+}
+#quote .quote_day .quote_tittle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+#quote .quote_day .quote_tittle h3 {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  font-size: 32px;
+}
+#quote .quote_day .quote_tittle h3 label {
+  border-bottom: solid 2px #F7B02F;
+}
+#quote .quote_day i {
+  position: absolute;
+  top: 10px;
+  left: 48%;
+  font-size: 64px;
+  color: #ffffff;
+}
+#quote .quote_day .quote_text {
+  margin-top: 20px;
+}
+#quote .quote_day .quote_text h6 {
+  margin-top: 20px;
+}
