@@ -1,0 +1,105 @@
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+#experience{
+    min-height: 50vh;
+    .experience_tittle{
+
+        h3{
+            @include text(0,2,0);
+            margin: 40px 0px 30px;
+            padding-left: 90px;
+
+            label{
+                border-bottom: solid 2px $mainColorY;
+            }
+        }
+    }
+
+    .experience{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        // min-height: 50vh;
+    
+        .experience_container{
+            width: 80%;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+    
+            .experience_card{
+                margin: 20px;
+                position: relative;
+                width: 300px;
+                height: 200px;
+                box-shadow: 0px 0px 10px gray;
+    
+                .card_face{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.5s;
+                }
+    
+                .face1{
+                    background-color: $secondColorG;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1;
+                    transform-origin: bottom;
+                    .face_content{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+    
+                        img{
+                            max-width: 100px;
+                        }
+        
+                        h3{
+                            letter-spacing: 2px;
+                            margin: 10px 0 0;
+                            color: $mainColorB;
+                            text-align: center;
+                            font-size: 1.5em;//
+                        }
+                    }
+                }
+    
+                &:hover .card_face.face1{
+                    transform: translateY(-100%) rotateX(90deg);
+                    background-color: $mainColorY;
+                }
+    
+                .face2{
+                    background-color: $mainColorW;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    transform-origin: top;
+                    transform: translateY(100%) rotateX(90deg);
+                }
+    
+                &:hover .card_face.face2{
+                    transform: translateY(0%) rotateX(0deg);
+                    background-color: $mainColorB;
+                    color: $mainColorW;
+                }
+            }
+        }
+    }
+}
