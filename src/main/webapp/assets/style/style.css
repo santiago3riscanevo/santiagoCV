@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header .header_background {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+#header .header_background .header_backgound-left {
+  height: 50vh;
+  width: 60%;
+  position: relative;
+  background-color: #2B2B2B;
+  color: white;
+  display: flex;
+}
+#header .header_background .header_backgound-left .header_left-content {
+  width: -webkit-max-content;
+  width: max-content;
+  padding: 10px;
+  margin: auto;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left_text p {
+  font-size: 14px;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left_text .name {
+  color: #F7B02F;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left_text .profession {
+  font-size: 16px;
+  font-size: large;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left-contact {
+  margin-top: 40px;
+  color: #F7B02F;
+  display: flex;
+  justify-content: space-around;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left-contact h5 {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #F7B02F;
+}
+#header .header_background .header_backgound-left .header_left-content .header_left-contact h5:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  color: white;
+  background: #F7B02F;
+}
+#header .header_background .header_backgound-left img {
+  width: 300px;
+  position: absolute;
+  left: 85%;
+  bottom: 0px;
+}
+#header .header_background .header_backgound-rigth {
+  width: 40%;
+  background-color: #F7B02F;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+#header .header_background .header_backgound-rigth i {
+  font-size: 32px;
+  margin: 10px;
+}
+#header .header_background .header_backgound-rigth i:hover {
+  transition: all 0.4s;
+  transform: scale(1.1);
+}
