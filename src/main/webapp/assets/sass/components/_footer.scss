@@ -1,0 +1,94 @@
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+#footer{
+    padding: 30px;
+    background-color:$mainColorB;
+
+    .fotter_tittle{
+        padding: 10px;
+        width: fit-content;
+        position: relative;
+        margin: 10px auto 20px;
+
+        .fotter_tittle1{
+            @include text(0,2,0);
+            position: relative;
+            z-index: 2;
+            color: $mainColorY;
+        }
+
+        .fotter_tittle2{
+            @include text(0,0,3);
+            position: absolute;
+            top: -19px;
+            left: -30px;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.114);
+            font-weight: 900;
+        }
+        
+    }
+
+    .footer_contact-content{
+        display: flex;
+        .footer_contact{
+            width: 60%;
+            form{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+        
+                label{
+                    color:$mainColorY;
+                }
+        
+                input{
+                    height: 20px;
+                    border: none;
+                    padding:15px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    outline: none;
+                }
+        
+                button{
+                    padding: 5px;
+                    margin: auto;
+                    width: 90px;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    border: none;
+        
+                    &:hover{
+                        transform: 0.4s;
+                        background-color: $mainColorY;
+                    }
+                }
+            }
+
+        }
+
+        .footer_me{
+            color: $mainColorW;
+            @include text(1,0,0);
+            display: flex;
+            align-items: flex-end;
+            ul{
+                margin-bottom: 30px;
+                li{
+                    list-style: none;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
