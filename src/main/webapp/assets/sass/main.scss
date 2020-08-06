@@ -6,7 +6,7 @@
 // colors
 $mainColorB: #2B2B2B;
 $mainColorY: #F7B02F;
-$mainColorW: white;
+$mainColorW: #ffffff;
 
 //fonts Size
 @mixin text($value1,$value2,$value3) {
@@ -20,5 +20,19 @@ $mainColorW: white;
 }
 
 // buttons
+@mixin button {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px $mainColorY;
 
+    &:hover{
+        cursor: pointer;
+        transition: all 0.4s;
+        color: $mainColorW;
+        background: $mainColorY;
+    }
+}
+
+// imports
 @import "components/header";
+@import "components/about";
