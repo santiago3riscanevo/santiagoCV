@@ -1,0 +1,79 @@
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+@mixin link($color) {
+    text-decoration: none;
+    color: $mainColorY;
+    cursor: pointer;
+    &:target{
+        color: $color;
+    }
+}
+
+nav{
+    background-color: $mainColorB;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    .nave_name{
+        width: 33.3%;
+        margin: auto;
+        @include text(0,2,0);
+        letter-spacing: 3px;
+        a{
+            @include link($mainColorY);
+        }
+    }
+
+    .nav_list{
+        width: 33.3%;
+        ul{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+                margin: auto;
+                list-style: none;
+                a{
+                    @include link($mainColorY);
+                    &:hover{
+                        transition: all 0.4s;
+                        transform: scale(1.1);
+                        text-decoration: underline;
+                        color:$secondColorG;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav_social{
+        width: 33.3%;
+        a{
+            @include link($mainColorY);
+
+            i{
+                @include text(0,2,0);
+                margin-right: 20px;
+                &:hover{
+                    transition: all 0.4s;
+                    transform: scale(1.1);
+                    color:$secondColorG ;
+                }
+            }
+
+        }
+    }
+}
