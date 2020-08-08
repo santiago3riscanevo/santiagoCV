@@ -17,14 +17,15 @@
     }
 }
 
-nav{
+#nav{
+    padding: 5px;
     background-color: $mainColorB;
     width: 100%;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 5;
 
     .nave_name{
         width: 33.3%;

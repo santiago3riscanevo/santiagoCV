@@ -61,6 +61,13 @@
                 h5{
                     margin-top: 20px;
                     @include button();
+                    a{
+                        text-decoration: none;
+                        color: inherit;
+                        &:target{
+                            color: inherit;
+                        }
+                    }
                 }
             }
         }

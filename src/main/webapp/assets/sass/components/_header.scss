@@ -27,7 +27,7 @@
         position: relative;
         display: flex;
         .header_backgound-left{
-            height: 50vh;
+            height: 56vh;
             width: 60%;
             position: relative;
             background-color: $mainColorB ;
@@ -62,8 +62,15 @@
                     display: flex;
                     justify-content: space-around;
 
-                    h5{
-                        @include button();
+                    a{
+                        text-decoration: none;
+                        color: inherit;
+                        &:target{
+                            color: inherit;
+                        }
+                        h5{
+                            @include button();
+                        }
                     }
                 }
             }
@@ -83,14 +90,22 @@
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            i{
-                @include text(0,2,0);
-                margin:10px;
-
-                &:hover{
-                    transition: all 0.4s;
-                    transform: scale(1.1);
+            a{
+                text-decoration: none;
+                color: $mainColorB;
+                &:target{
+                    color: $mainColorB;
                 }
+                i{
+                    @include text(0,2,0);
+                    margin:10px;
+    
+                    &:hover{
+                        transition: all 0.4s;
+                        transform: scale(1.1);
+                    }
+                }
+
             }
         }
     }

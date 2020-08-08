@@ -8,6 +8,19 @@
     }
 }
 
+@mixin button {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px $mainColorY;
+
+    &:hover{
+        cursor: pointer;
+        transition: all 0.4s;
+        color: $mainColorW;
+        background: $mainColorY;
+    }
+}
+
 #experience{
     min-height: 50vh;
     .experience_tittle{
