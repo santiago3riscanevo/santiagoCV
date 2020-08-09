@@ -1,15 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-// colors
-$mainColorB: #2B2B2B;
-$mainColorY: #F7B02F;
-$mainColorW: #ffffff;
-$secondColorG:#EAEAEA;
-
 //fonts Size
 @mixin text($value1,$value2,$value3) {
     @if $value1 == 1{
@@ -35,7 +23,24 @@ $secondColorG:#EAEAEA;
     }
 }
 
-// imports
-@import "components/nav";
-@import "components_aboutMe/aboutHeader";
-@import "components_aboutMe/aboutitems";
+#about{
+    margin-top: 40px;
+
+    .about_items{
+        width: 70%;
+        padding: 10px;
+        margin: auto;
+        // background-color: violet;
+        display: flex;
+        justify-content: space-around;
+        @include text(0,2,0);
+        
+        p{
+            @include button();
+            margin-right: 20px;
+            box-shadow: 0px 0px 10px $mainColorY;
+            
+        }
+
+    }
+}
