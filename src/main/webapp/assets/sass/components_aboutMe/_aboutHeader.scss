@@ -11,7 +11,7 @@
 @mixin button {
     padding: 10px;
     border-radius: 5px;
-    border: solid 1px $mainColorY;
+    border: solid 1px transparent;
 
     &:hover{
         cursor: pointer;
@@ -58,6 +58,23 @@
                 @include text(0,0,3);
             }
             
+        }
+    }
+
+    .cta{
+        padding: 20px;
+        @include text(1,0,0);
+        @include button();
+        position: absolute;
+        top: 40%;
+        left: 46%;
+        text-align: center;
+        color: $mainColorB;
+        box-shadow: 0px 0px 10px gray;
+
+        a{
+            text-decoration: none;
+            color: initial;
         }
     }
 }

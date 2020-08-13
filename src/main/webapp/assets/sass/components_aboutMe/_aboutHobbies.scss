@@ -1,0 +1,49 @@
+//fonts Size
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+#hobbies{
+    margin-top: 20px;
+    height: max-content;
+    background-color: $secondColorG;
+    .hobbies_background{
+        text-align: center;
+        h4{
+            padding: 30px 0 0px;
+            @include text(0,2,0);
+            label{
+                border-bottom: solid 2px $mainColorY;
+            }
+        }
+
+
+        .hobbies_content{
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+            .hobbie{
+                margin: 20px;
+                width: 250px;
+                height: 200px;
+
+                img{
+                    width: 200px;
+                    height: 150px;
+                }
+
+                p{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
