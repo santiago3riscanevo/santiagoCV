@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+// colors
+$mainColorB: #2B2B2B;
+$mainColorY: #F7B02F;
+$mainColorW: #ffffff;
+$secondColorG:#EAEAEA;
+
+//fonts Size
+@mixin text($value1,$value2,$value3) {
+    @if $value1 == 1{
+        font-size: 16px;
+    } @else if $value2 == 2 {
+        font-size: 32px;
+    } @else if $value3 == 3 {
+        font-size: 64px;
+    }
+}
+
+// buttons
+@mixin button {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px $mainColorY;
+
+    &:hover{
+        cursor: pointer;
+        transition: all 0.4s;
+        color: $mainColorW;
+        background: $mainColorY;
+    }
+}
+
+// imports
+@import "components/nav";
+@import "components_portfolio/portfolioHeader";
+@import "components_portfolio/portfolioItems";
+@import "components/footer";

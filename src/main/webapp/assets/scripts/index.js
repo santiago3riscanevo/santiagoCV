@@ -8,9 +8,13 @@ const aboutContact = document.querySelectorAll('.contact_button')
 // => quote 
 const quote = document.getElementById("quote")
 // => experience
+const experienciaTitle = document.querySelector(".experience_title")
 const experience = document.querySelectorAll(".experience_card")
+// => footer
+const footerTitle2 = document.querySelector(".fotter_tittle2")
+const footerTitle = document.querySelector('.fotter_tittle1')
 //call Object
-window.animations = new Animated(headerText,buttonHeader,aboutText,aboutContact,quote,experience)
+window.animations = new Animated(headerText,buttonHeader,aboutText,aboutContact,quote,experience,experienciaTitle,footerTitle2,footerTitle)
 //execute
 window.addEventListener("DOMContentLoaded", function(){
     animations.startLeft()
@@ -28,5 +32,13 @@ window.addEventListener("scroll", () => {
 
     if(coords.y <= 440){
         animations.aboutContact2()
+        animations.remove2()
+        animations.headerButton2()
+    }
+
+    if(coords.y <= 5){
+        animations.remove3()
+        animations.startLeft2()
+        animations.headerButton3()
     }
 })
