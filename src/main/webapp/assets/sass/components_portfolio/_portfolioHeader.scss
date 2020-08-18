@@ -16,7 +16,7 @@
     &:hover{
         cursor: pointer;
         transition: all 0.4s;
-        color: $mainColorW;
+        color: $mainColorB;
         background: $mainColorY;
     }
 }
@@ -24,13 +24,15 @@
     .header{
         img{
             width: 100%;
-            height: 100vh;
+            height: 50vh;
             position: absolute;
             top:47px;
+            object-fit: cover;
+            object-position: top;
         }
         .header_filter{
             width: 100%;
-            height: 100vh;
+            height: 50vh;
             background: -webkit-linear-gradient(to bottom, #a1ab5860, #63636360);
             background: linear-gradient(to bottom, #a2ab5860, #63636360);
             display: flex;
@@ -50,6 +52,7 @@
 
             p{
                 @include button();
+                color: white;
                 margin-top: 90px;
                 box-shadow:  0px 0px 10px $mainColorY;
             }
