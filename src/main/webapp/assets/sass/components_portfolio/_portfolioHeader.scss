@@ -1,3 +1,5 @@
+// W => 1025, 1000, 767, 600, 480, 400, 350
+// H => 640, 480, 450, 360, 320
 @mixin text($value1,$value2,$value3) {
     @if $value1 == 1{
         font-size: 16px;
@@ -29,6 +31,14 @@
             top:47px;
             object-fit: cover;
             object-position: top;
+
+            @media (max-width:360px) {
+                height: 80vh;
+            }
+
+            @media (max-height:400px) {
+                height: 95vh;
+            }
         }
         .header_filter{
             width: 100%;
@@ -43,11 +53,25 @@
             top: 47px;
             z-index: 2;
 
+            @media (max-width:360px) {
+                height: 80vh;
+            }
+
+            @media (max-height:400px) {
+                height: 95vh;
+            }
+
             h4{
                 @include text(0,0,3);
+                text-align: center;
+                text-shadow: 5px 5px 10px wheat;
                 label{
                     border-bottom: solid 2px $mainColorY ;
+                    @media (max-width:680px){
+                        border-bottom: none ;
+                    }
                 }
+
             }
 
             p{
@@ -55,6 +79,11 @@
                 color: white;
                 margin-top: 90px;
                 box-shadow:  0px 0px 10px $mainColorY;
+
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
             }
 
         }

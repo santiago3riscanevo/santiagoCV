@@ -22,11 +22,29 @@
 }
 
 #header{
-    overflow-x: hidden;
+    overflow: hidden;
+
+    @media(max-height:640px){
+        height: 70vh;
+    }
+
+    @media(max-height:480px){
+        height: 100vh;
+    }
+
     .header_background{
         width: 100%;
         position: relative;
         display: flex;
+
+        @media(max-height:640px){
+            height: 70vh;
+        }
+
+        @media(max-height:480px){
+            height: 100vh;
+        }
+
         .header_backgound-left{
             height: 56vh;
             width: 60%;
@@ -34,6 +52,15 @@
             background-color: $mainColorB ;
             color: $mainColorW;
             display: flex;
+
+            @media(max-height:640px){
+                height: 70vh;
+            }
+
+            @media(max-height:480px){
+                height: 100vh;
+            }
+
             .header_left-content{
                 width: max-content;
                 padding: 10px;
@@ -88,6 +115,27 @@
 
                 @media (max-width: 600px) {
                     left: 90%;   
+                }
+
+                @media (max-width:480px){
+                    left: 75%;
+                }
+
+                @media (max-width:400px){
+                    left: 65%;
+                    width: 250px;
+                }
+
+                @media(max-height:480px){
+                    width: 250px;
+                }
+
+                // @media(max-height:360px){
+                //     width: 250px;
+                // }
+
+                @media(max-height:320px){
+                    width: 230px;
                 }
             }
         }

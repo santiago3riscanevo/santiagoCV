@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    position: fixed;
+    position: fixed;    
     z-index: 5;
 
     @media (max-width: 1000px) {
@@ -45,6 +45,8 @@
     .nave_name{
         width: 33.3%;
         margin: auto;
+        position: relative;
+        z-index: 2;
         
         a{
             @include link($mainColorY);
@@ -57,8 +59,12 @@
             width: 50%;    
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             width: 20%;    
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;    
         }
     }
 
@@ -69,7 +75,7 @@
             width: 100%;
             background-color: $mainColorB;
             position: absolute;   
-            top: 45px;
+            top: 0px;
             right: 0px;
             transition: 0.5s all;
             transform: translateY(-110%);
@@ -89,7 +95,10 @@
             li{
                 margin: auto;
                 list-style: none;
-                opacity: 0;
+
+                @media (max-width: 1000px) {
+                    opacity: 0;
+                }
                 a{
                     @include link($mainColorY);
                     &:hover{
@@ -112,9 +121,18 @@
         position: absolute;
         right: 20px;
         top: 20px;
+        z-index: 3;
 
         @media (max-width:1000px){
             display: block;
+        }
+
+        @media (max-width:480px){
+            right: 40px;
+        }
+
+        @media (max-width:400px){
+            right: 20px;
         }
 
         .menu1{
@@ -147,12 +165,14 @@
 
     .nav_social{
         width: 33.3%;
+        position: relative;
+        z-index: 2;
 
         @media (max-width: 1000px) {
             width: 50%;     
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             position: relative;
             left: 0px;
             width: 70%; 
@@ -164,6 +184,10 @@
             left: 0px;
             width: 70%; 
             padding-right: 9px;    
+        }
+
+        @media (max-width: 480px){
+            display: none;
         }
 
         a{

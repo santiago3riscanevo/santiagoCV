@@ -26,6 +26,15 @@
 #studies{
     margin-top: 80px;
     padding: 10px 80px;
+
+    @media(max-width:767px){
+        padding: 10px 40px;
+    }
+
+    @media(max-width:600px){
+        padding: 10px 20px;
+    }
+
     h4{
         @include text(0,2,0);
 
@@ -49,6 +58,11 @@
                 width: 350px;
                 height: 350px;
                 overflow-y: hidden;
+
+                @media(max-width:400px){
+                    width: 300px;
+                    height: 300px;
+                }
                 
 
                 img{
