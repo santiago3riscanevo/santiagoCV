@@ -24,11 +24,24 @@
 #about{
     width: 100%;
     display: flex;
+
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+
     .about_content{
         width: 50%;
-        height: 50vh;
+        height: 45vh;
         display: flex;
 
+        @media(max-width:1000px){
+            width: 60%;
+        }
+
+        @media(max-width:768px){
+            width: 100%;
+        }
+        
         .about_text{
             margin: auto;
             padding: 20px;
@@ -57,9 +70,11 @@
 
             .about_contact{
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 h5{
                     margin-top: 20px;
+                    margin-right: 5px;
                     @include button();
                     a{
                         text-decoration: none;
@@ -78,14 +93,32 @@
         height: 50vh;
         display: flex;
 
+        @media(max-width:1000px){
+            width: 40%;
+        }
+
+        @media(max-width:768px){
+            width: 100%;
+        }
+
         .about_image{
             margin: auto;
             width: 280px;
             height: 350px;
+
+            @media(max-width:1000px){
+                width: 280px;
+                height: 280px;
+            }
+
+            @media(max-width:768px){
+                width: 350px;
+                height: 350px;
+            }
             
             img{
-                width: 380px;
-                height: 350px;
+                width: inherit;
+                height: inherit;
                 object-fit: fill;
                 border-radius: 15px;
                 box-shadow: -8px 8px 10px gray;

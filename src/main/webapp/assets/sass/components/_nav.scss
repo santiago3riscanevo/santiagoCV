@@ -17,6 +17,17 @@
     }
 }
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 #nav{
     padding: 5px;
     background-color: $mainColorB;
@@ -27,26 +38,58 @@
     position: fixed;
     z-index: 5;
 
+    @media (max-width: 1000px) {
+        justify-content: space-around;  
+    }
+
     .nave_name{
         width: 33.3%;
         margin: auto;
-        @include text(0,2,0);
-        letter-spacing: 3px;
+        
         a{
             @include link($mainColorY);
+        }
+
+        @include text(0,2,0);
+        letter-spacing: 3px;
+
+        @media (max-width: 1000px) {
+            width: 50%;    
+        }
+
+        @media (max-width: 768px) {
+            width: 20%;    
         }
     }
 
     .nav_list{
         width: 33.3%;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+            background-color: $mainColorB;
+            position: absolute;   
+            top: 45px;
+            right: 0px;
+            transition: 0.5s all;
+            transform: translateY(-110%);
+        }
+
         ul{
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media (max-width: 1000px) {
+                flex-direction: column; 
+                height: 100vh;  
+            }
+
             li{
                 margin: auto;
                 list-style: none;
+                opacity: 0;
                 a{
                     @include link($mainColorY);
                     &:hover{
@@ -60,11 +103,71 @@
         }
     }
 
+    .open{
+        transform: translateY(0%);
+    }
+
+    .burguer_menu{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        @media (max-width:1000px){
+            display: block;
+        }
+
+        .menu1{
+            width: 20px;
+            height: 3px;
+            background-color: $mainColorY;
+            margin-bottom: 2px;
+            position: relative;
+            left: 10px;
+            transition: 0.5s all;
+        }
+
+        .menu2{
+            width: 30px;
+            height: 3px;
+            background-color: $mainColorY;
+            margin-bottom: 2px;
+            transition: 0.5s all;
+        }
+    }
+
+    .ex .menu1{
+        width: 30px;
+        left: 0px;
+        transform: rotate(45deg) translate(-6px,10px);
+    }
+    .ex .menu2{
+        transform: rotate(-45deg) translate(-7px,-10px);
+    }
+
     .nav_social{
         width: 33.3%;
+
+        @media (max-width: 1000px) {
+            width: 50%;     
+        }
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: 0px;
+            width: 70%; 
+            padding-right: 90px;    
+        }
+
+        @media (max-width: 600px) {
+            position: relative;
+            left: 0px;
+            width: 70%; 
+            padding-right: 9px;    
+        }
+
         a{
             @include link($mainColorY);
-
             i{
                 @include text(0,2,0);
                 margin-right: 20px;

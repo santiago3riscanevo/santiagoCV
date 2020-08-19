@@ -5,6 +5,16 @@
   scroll-behavior: smooth;
 }
 
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 #nav {
   padding: 5px;
   background-color: #2B2B2B;
@@ -14,6 +24,11 @@
   text-align: center;
   position: fixed;
   z-index: 5;
+}
+@media (max-width: 1000px) {
+  #nav {
+    justify-content: space-around;
+  }
 }
 #nav .nave_name {
   width: 33.3%;
@@ -29,8 +44,29 @@
 #nav .nave_name a:target {
   color: #F7B02F;
 }
+@media (max-width: 1000px) {
+  #nav .nave_name {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  #nav .nave_name {
+    width: 20%;
+  }
+}
 #nav .nav_list {
   width: 33.3%;
+}
+@media (max-width: 1000px) {
+  #nav .nav_list {
+    width: 100%;
+    background-color: #2B2B2B;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    transition: 0.5s all;
+    transform: translateY(-110%);
+  }
 }
 #nav .nav_list ul {
   height: 100%;
@@ -38,9 +74,16 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  #nav .nav_list ul {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
 #nav .nav_list ul li {
   margin: auto;
   list-style: none;
+  opacity: 0;
 }
 #nav .nav_list ul li a {
   text-decoration: none;
@@ -56,8 +99,67 @@
   text-decoration: underline;
   color: #EAEAEA;
 }
+#nav .open {
+  transform: translateY(0%);
+}
+#nav .burguer_menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+@media (max-width: 1000px) {
+  #nav .burguer_menu {
+    display: block;
+  }
+}
+#nav .burguer_menu .menu1 {
+  width: 20px;
+  height: 3px;
+  background-color: #F7B02F;
+  margin-bottom: 2px;
+  position: relative;
+  left: 10px;
+  transition: 0.5s all;
+}
+#nav .burguer_menu .menu2 {
+  width: 30px;
+  height: 3px;
+  background-color: #F7B02F;
+  margin-bottom: 2px;
+  transition: 0.5s all;
+}
+#nav .ex .menu1 {
+  width: 30px;
+  left: 0px;
+  transform: rotate(45deg) translate(-6px, 10px);
+}
+#nav .ex .menu2 {
+  transform: rotate(-45deg) translate(-7px, -10px);
+}
 #nav .nav_social {
   width: 33.3%;
+}
+@media (max-width: 1000px) {
+  #nav .nav_social {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  #nav .nav_social {
+    position: relative;
+    left: 0px;
+    width: 70%;
+    padding-right: 90px;
+  }
+}
+@media (max-width: 600px) {
+  #nav .nav_social {
+    position: relative;
+    left: 0px;
+    width: 70%;
+    padding-right: 9px;
+  }
 }
 #nav .nav_social a {
   text-decoration: none;

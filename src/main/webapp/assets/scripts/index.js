@@ -1,4 +1,5 @@
 import Animated from "./components/animated.js"
+import NavBurguer from "./components/burguerMenu.js"
 
 //get datas
 const headerText = document.querySelector('.header_left_text')
@@ -15,6 +16,9 @@ const footerTitle2 = document.querySelector(".fotter_tittle2")
 const footerTitle = document.querySelector('.fotter_tittle1')
 //call Object
 window.animations = new Animated(headerText,buttonHeader,aboutText,aboutContact,quote,experience,experienciaTitle,footerTitle2,footerTitle)
+
+const startBurguer = new NavBurguer();
+
 //execute
 window.addEventListener("DOMContentLoaded", function(){
     animations.startLeft()
@@ -42,3 +46,7 @@ window.addEventListener("scroll", () => {
         animations.headerButton3()
     }
 })
+
+startBurguer.start()
+
+

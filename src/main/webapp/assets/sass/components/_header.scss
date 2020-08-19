@@ -22,6 +22,7 @@
 }
 
 #header{
+    overflow-x: hidden;
     .header_background{
         width: 100%;
         position: relative;
@@ -78,8 +79,16 @@
             img{
                 width: 300px;
                 position: absolute;
-                left: 85%;
+                left: 80%;
                 bottom: 0px;
+
+                @media (max-width: 768px) {
+                    left: 70%;   
+                }
+
+                @media (max-width: 600px) {
+                    left: 90%;   
+                }
             }
         }
         
@@ -96,6 +105,11 @@
                 &:target{
                     color: $mainColorB;
                 }
+
+                @media (max-width: 600px) {
+                    display: none;   
+                }
+
                 i{
                     @include text(0,2,0);
                     margin:10px;
